@@ -1,0 +1,4 @@
+#!/bin/sh
+logger -t nswa-preact "run auto act"
+/lib/ranga/libexec/act --auto
+exit 0

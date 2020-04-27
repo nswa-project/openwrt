@@ -1,0 +1,2 @@
+[ -f /etc/.ranga-devel ] && ip6tables -A input_wan_rule -p tcp --dport 22 -j ACCEPT
+/lib/ranga/run-hooks "fwreset"
