@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case "$ACTION" in
+pressed)
+	cp /rom/etc/ranga/pass-nswa /etc/ranga/pass-nswa
+	sync
+	;;
+esac
+
+exit 0

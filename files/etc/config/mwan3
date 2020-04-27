@@ -1,0 +1,13 @@
+
+config globals 'globals'
+	option mmx_mask '0x3F00'
+	option local_source 'lan'
+
+config policy 'balanced'
+	option last_resort 'unreachable'
+
+config rule 'default'
+	option proto 'all'
+	option use_policy 'balanced'
+	option sticky '0'
+
