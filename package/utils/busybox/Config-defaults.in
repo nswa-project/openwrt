@@ -2434,10 +2434,10 @@ config BUSYBOX_DEFAULT_FEATURE_NSLOOKUP_OPENWRT_LONG_OPTIONS
 	default n
 config BUSYBOX_DEFAULT_NTPD
 	bool
-	default y
+	default n
 config BUSYBOX_DEFAULT_FEATURE_NTPD_SERVER
 	bool
-	default y
+	default n
 config BUSYBOX_DEFAULT_FEATURE_NTPD_CONF
 	bool
 	default n

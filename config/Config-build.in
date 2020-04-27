@@ -32,7 +32,7 @@ menu "Global build settings"
 
 	config SIGNED_PACKAGES
 		bool "Cryptographically signed package lists"
-		default y
+		default n
 
 	config SIGNATURE_CHECK
 		bool "Enable signature checking in opkg"
@@ -76,7 +76,7 @@ menu "Global build settings"
 	config CLEAN_IPKG
 		bool
 		prompt "Remove ipkg/opkg status data files in final images"
-		default n
+		default y
 		help
 		  This removes all ipkg/opkg status data files from the target directory
 		  before building the root filesystem.

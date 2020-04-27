@@ -162,6 +162,23 @@ ppp_generic_teardown() {
 	local interface="$1"
 	local errorstring=$(ppp_exitcode_tostring $ERROR)
 
+	logger -t nswa-ppp "teardown: $ERROR ($errorstring)"
+	autoppp=`uci get nswa.misc.autoppp`
+	case "$autoppp" in
+	hangup)
+		if [ "$ERROR" != "16" ]; then
+			proto_block_restart "$interface"
+			logger -t nswa-ppp "restarting blocked"
+		fi
+		;;
+	always)
+		;;
+	*)
+		proto_block_restart "$interface"
+		logger -t nswa-ppp "restarting blocked"
+		;;
+	esac
+
 	case "$ERROR" in
 		0)
 		;;

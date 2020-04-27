@@ -99,8 +99,6 @@ preinit_config_board() {
 }
 
 preinit_ip() {
-	[ "$pi_preinit_no_failsafe" = "y" ] && return
-
 	# if the preinit interface isn't specified and ifname is set in
 	# preinit.arch use that interface
 	if [ -z "$pi_ifname" ]; then
