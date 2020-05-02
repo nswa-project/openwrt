@@ -1,3 +1,1 @@
 src-git packages https://github.com/openwrt/packages^99efce0cd27adfcc53384fba93f37e5ee2e517de
-src-git routing https://git.openwrt.org/feed/routing.git^efa6e5445adda9c6545f551808829ec927cbade8
-src-git telephony https://github.com/openwrt/telephony^6f95d6ab3f359ee2ce81c20522700937424d1591
